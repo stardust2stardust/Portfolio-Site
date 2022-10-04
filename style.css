@@ -54,7 +54,82 @@ a:hover {
   text-decoration: none;
 }
 
-/* intro styles */
+/* - - -  HEADER  - - - */
+header {
+  padding: 1rem 2rem;
+  font-family: var(--mono);
+  box-shadow: 0px 3px 15px var(--purple);
+}
+
+header h1 {
+  font-family: var(--sans);
+  font-size: 1.5em;
+  display: inline-block;
+}
+
+.header-nav {
+  display: flex;
+  gap: 2rem;
+  font-size: 80%;
+  padding: 0;
+  margin: 0;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+
+.header-logo {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+}
+
+.header-nav li:first-child {
+  flex-basis: 100%;
+  text-align: center;
+}
+
+.header-nav a {
+  text-decoration: none;
+  color: var(--light);
+  display: block;
+}
+
+.header-nav a:hover {
+  color: var(--bright-pink);
+}
+
+svg {
+  padding: 3px;
+  width: 40px;
+}
+
+.svg-icon {
+  background-color: var(--light-blue);
+  border-radius: 3px;
+  width: 20px;
+  height: 20px;
+}
+
+.logo-icon {
+  background: none;
+}
+
+.btn {
+  background-color: var(--orange);
+  padding: 3px 10px;
+  border-radius: 5px;
+  font-family: var(--cursive);
+}
+
+.btn.btn:hover {
+  background-color: var(--red);
+  color: var(--lightest);
+}
+
+/* - - -  INTRO  - - - */
 #intro {
   padding-bottom: 10rem;
 }
@@ -80,9 +155,43 @@ a:hover {
   font-weight: normal;
 }
 
+/* - - -  CONTACT  - - - */
+
 #contact {
   background-color: var(--purple);
-  font-size: 1rem;
-  padding: 20px 100px;
+  display: flex;
+  flex-direction: column;
+  color: var(--lightest);
+  padding: 3rem 0;
+  margin: 0 auto;
   text-align: center;
+}
+
+/* - - -  FOOTER  - - - */
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background-color: var(--blue);
+}
+
+footer ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  gap: 20px;
+}
+
+@media (min-width: 850px) {
+  .header-nav {
+    justify-content: flex-end;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .header-nav li:first-child {
+    flex-basis: auto;
+    margin-right: auto;
+    text-align: left;
+  }
 }
